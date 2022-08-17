@@ -121,6 +121,7 @@ var maxTime;
 document.addEventListener('DOMContentLoaded', () => {
   video = document.getElementById("myVideo");
   video.defaultPlaybackRate = 0.70;
+  video.volume =2.0;
   video.addEventListener("timeupdate", function(){
     if(video.currentTime >= maxTime){
       myLoop();
