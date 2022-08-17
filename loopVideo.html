@@ -126,7 +126,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function playVideo(myUrl, startTime, endTime) { 
-  //document.getElementById("demo").innerHTML +=myUrl + " start:"+startTime+" end: "+endTime+"<br>";
+  document.getElementById("demo").innerHTML +=myUrl + " start:"+startTime+" end: "+endTime+"<br>";
   
   //video.src = 'video/'+myUrl;
   video.src = myUrl;
@@ -147,7 +147,7 @@ function myLoop(){
   }
   playVideo(sentences[video_index][0], sentences[video_index][1][time_index][0], sentences[video_index][1][time_index][1]);
   repeat++;
-  if (repeat >= 5) {
+  if (repeat >= 3) {
     repeat = 0;
     time_index++;
     if (time_index >= sentences[video_index][1].length) {
