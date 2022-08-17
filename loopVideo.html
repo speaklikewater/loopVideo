@@ -7,24 +7,103 @@ var sentences=
  [//'journey27.mp4', 
  'https://public.dm.files.1drv.com/y4m4G1oB3GABS9fqse2deXkzU_TCdLCzNkbDJlNNBAm-cWDrDPq3nntbzwcwUPteSzT3qi8ZuTUtPmBNeTBxen8R3eVgX4US0GEo_OVwOPV7djPRACK_U3k9UpAtuvcFcZU9hWLJ6v-BXSlTZhOuNTKM1hZXvbuGClCwvbmBh2YEeL50Xa15DFPO_iFFbqFboGrl2l8w9iTsWvnab3aaUky7haOkfD1ClWUK9SzvSFLUEA?',
   [
-    [1, 2],
-    [5, 7]
+    [1,7],
+    [12,17],
+    [20,30],
+    [31,39],
+    [39,47],
+    [47,56],
+    [56,60],
+    [60,68],
+    [68,75],
+    [75,84],
+    [84,100],
+    [100,113],
+    [113,119],
+    [119,126],
+    [126,136],
+    [136,145],
+    [145,152],
+    [152,161],
+    [161,168],
+    [168,180],
+    [180,194],
+    [194,201],
+    [201,216],
+    [216,230],
+    [230,240],
+    [240,253],
+    [253,272],
+    [272,280],
+    [280,288]
+   
   ]
  ],
  [//'journey28.mp4', 
  'https://public.dm.files.1drv.com/y4mBlRN9xkp_vH6S9Nn0kDnCghzCBogJzl4WH9BBtZVkNui62We8w3aW4c2TV6fwIV-SfSB1sgF2E5vOzzm_YlhSUvEEd-Z2LDTYwoZglztIuNMvzB9dQ0rWMOlad32m8i1fC14YtUojieOwOG2GJHa9EYQsUkU6doqAte7AsPgrYu_cx7LzEOKby8wKu_co4yCUMoEAQK9l-fduAvVwK5gaDGocZZQyzr108V_-LM1dC4?',
   [
-    [10, 12],
-    [13, 17],
-    [25, 36]
+    [1,7],
+    [7,22],
+    [22,30],
+    [30,34],
+    [34,37],
+    [37,41],
+    [41,44],
+    [44,47],
+    [47,60],
+    [60,66],
+    [66,76],
+    [76,83],
+    [83,91],
+    [91,99],
+    [99,105],
+    [105,113],
+    [113,117],
+    [117,126],
+    [126,131],
+    [131,139],
+    [139,144],
+    [144,147],
+    [147,155],
+    [155,159],
+    [159,163],
+    [163,166],
+    [166,171],
+    [171,176],
+    [176,181],
+    [181,186],
+    [186,191],
+    [191,195],
+    [195,200],
+    [200,212],
+    [212,216],
+    [216,220],
+    [220,226],
+    [226,234],
+    [234,241],
+    [241,246],
+    [246,250],
+    [262,266],
+    [266,273],
+    [273,278],
+    [278,284],
+    [284,290],
+    [290,295],
+    [295,299],
+    [299,305]
   ]
  ],
  [//'journey29.mp4', 
  'https://public.dm.files.1drv.com/y4m_GaGpBlKeGTiCEqTTa7SQYUkSTftTVbv_-Ze_8tXwO9wMlrabTNzkNjNpeNBJuJnw-UAC-Skqd9Ycto2YtfG9r0K9ozib8OxKnTlbQnq_ncFkX4a0hO0LO45AE5IlrrjdClM1G-VvmoT2Yhr4Hw7-XeMSQksWj0xrT3R6KV_78o6J9QKc5DsvjD3wRyUZ8atgA768TbSq6OnGbEMLfQo-7VnTydunCdWejoN9Y6eHqM?',
   [
-    [13, 15],
-    [15, 19],
-    [21, 30]
+    [1,7],
+    [10,24],
+    [24,33],
+    [34,40],
+    [40,47],
+    [47,61],
+    [61,66],
+    [66,71]
   ]
  ]
 ];
@@ -68,7 +147,7 @@ function myLoop(){
   }
   playVideo(sentences[video_index][0], sentences[video_index][1][time_index][0], sentences[video_index][1][time_index][1]);
   repeat++;
-  if (repeat >= 3) {
+  if (repeat >= 5) {
     repeat = 0;
     time_index++;
     if (time_index >= sentences[video_index][1].length) {
