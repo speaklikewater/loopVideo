@@ -368,6 +368,7 @@ function listVideos(){
      document.getElementById("allVideos").innerHTML +=videoLink;
      vid_index++;
   }
+  document.getElementById("allVideos").style.fontSize = "x-large";
 }
 
   
@@ -382,7 +383,7 @@ function listVideos(){
 </video>
 
 <br>
-<a href="#" onclick="myLoop()" > Play All Videos</a>
+<a href="#" onclick="myLoop()" style="font-size: 30px; text-decoration: none"> Play All Videos</a>
 
 <br><br>
 <p id="allVideos"></p>
