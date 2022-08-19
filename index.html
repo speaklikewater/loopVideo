@@ -350,6 +350,27 @@ function myLoop(){
 
 }
 
+function jumpToVideo(vid_index){
+//    alert (vid_index);
+    video_index = vid_index;
+    time_index = 0;
+    repeat = 0;
+    myLoop();
+}
+  
+function listVideos(){
+  var vid_index=0;
+  for (const sentence of sentences) {
+     
+     const [video, timers] = sentence
+     var videoLink="<a href='#' onclick='jumpToVideo("+vid_index+")' >" + video + "</a><br><br>";
+     //alert (videoLink);
+     document.getElementById("allVideos").innerHTML +=videoLink;
+     vid_index++;
+  }
+}
+
+  
 </script>
 </head>
 <body>
@@ -363,7 +384,10 @@ function myLoop(){
 <br>
 <a href="#" onclick="myLoop()" > Play All Videos</a>
 
-<br>
+<br><br>
+<p id="allVideos"></p>
+<br><br>
+  
 <p id="demo"></p>
 </body>
 </html>
