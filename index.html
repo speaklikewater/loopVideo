@@ -46,7 +46,7 @@ var sentences=
 [213,216],
 [216,219],
 [219,225]
-    ]
+    ], 'Rocket Girl and the Hypnotized Students - Episode 1: Star Students'
  ],
   ['RocketGirlHypnotizedStudents2.mp4', 
     [
@@ -99,7 +99,7 @@ var sentences=
 [220,223],
 [223,226],
 [226,234]
-    ]
+    ], 'Rocket Girl and the Hypnotized Students - Episode 2: Missing Teachers'
  ],
   ['RocketGirlHypnotizedStudents3.mp4', 
   [
@@ -150,7 +150,7 @@ var sentences=
 [207,211],
 [211,216],
 [216,223]
-  ]
+  ], 'Rocket Girl and the Hypnotized Students - Episode 3: Missing Students'
  ],
  ['RocketGirlHypnotizedStudents4.mp4', 
   [
@@ -204,7 +204,7 @@ var sentences=
 [210,215],
 [215,218],
 [218,221]
-   ]
+   ], 'Rocket Girl and the Hypnotized Students - Episode 4: Locked Up'
  ],
   ['RocketGirlFreddieFreeze1.mp4', 
    [
@@ -242,7 +242,7 @@ var sentences=
 [207,215],
 [215,230],
 [230,233]
-   ]
+   ], 'Rocket Girl vs. Freddie Freeze - Episode 1: Roxy\'s Secret Power'
  ],
 ['RocketGirlFreddieFreeze2.mp4', 
   [
@@ -281,7 +281,7 @@ var sentences=
 [207,221],
 [221,226],
 [226,231]
-  ]
+  ], 'Rocket Girl vs. Freddie Freeze - Episode 2: Heat Vision'
  ],
  ['RocketGirlFreddieFreeze3.mp4', 
   [
@@ -328,7 +328,7 @@ var sentences=
 [192,195],
 [195,199],
 [199,207]
-  ]
+  ], 'Rocket Girl vs. Freddie Freeze - Episode 3: A slippery Slope'
  ],
   
   ['RocketGirlFreddieFreeze4.mp4', 
@@ -371,7 +371,7 @@ var sentences=
 [210,214],
 [214,219],
 [219,223]
-    ]
+    ], 'Rocket Girl vs. Freddie Freeze - Episode 4: Ice Cream'
  ],
   /*
   ['rocketgirlvsstinkybart1.mp4', 
@@ -485,7 +485,7 @@ var sentences=
       [229,235],
       [235,238],
       [238,241]
-  ]
+  ], 'Rocket Girl and the Aliens - Episode 1: Sloppy Joe Day'
  ],
  
   ['rocketgirl2.mp4', 
@@ -526,7 +526,7 @@ var sentences=
       [198,202],
       [202,207],
       [207,213]
-   ]
+   ], 'Rocket Girl and the Aliens - Episode 2: Roxy\'s Secret'
  ],
  
  ['rocketgirl3.mp4', 
@@ -554,7 +554,7 @@ var sentences=
       [179,183],
       [183,191],
       [191,206]
-   ]
+   ], 'Rocket Girl and the Aliens - Episode 3: Trouble Downtown'
  ],  
  ['rocketgirl4.mp4', 
    [
@@ -598,7 +598,7 @@ var sentences=
       [227,234],
       [234,237],
       [237,254]
-   ]
+   ], 'Rocket Girl and the Aliens - Episode 4: A Sticky Situation'
  ],  
  ['journey27.mp4', 
   [
@@ -633,7 +633,7 @@ var sentences=
     [280,288]
 
    
-  ]
+  ], 'Journey to the West - Chapter 27: The Ginseng Fruit'
  ],
  ['journey28.mp4', 
  //'https://vyha18.github.io/video/journey28.mp4',
@@ -688,7 +688,7 @@ var sentences=
     [295,299],
     [299,305]
 
-  ]
+  ], 'Journey to the West - Chapter 28: Wukong Leaves His Body'
  ],
  ['journey29.mp4', 
  //'https://vyha18.github.io/video/journey29.mp4',
@@ -732,7 +732,7 @@ var sentences=
     [277,286],
     [286,297]
 
-  ]
+  ], 'Journey to the West - Chapter 29: The Magix Sleeve'
  ],
  ['journey30.mp4', 
   [
@@ -780,7 +780,7 @@ var sentences=
 [272,279],
 [279,291],
 [291,296]
-  ]
+  ], 'Journey to the West - Chapter 30: The The Frying Pan'
  ],
  ['journey30.mp4', 
   [
@@ -829,7 +829,7 @@ var sentences=
 [275,281],
 [281,293],
 [293,308]
-  ]
+  ], 'Journey to the West - Chapter 31: Guanyin\'s Vase'
  ]
 ];
 
@@ -895,8 +895,8 @@ function listVideos(){
   var vid_index=0;
   for (const sentence of sentences) {
      
-     const [video, timers] = sentence
-     var videoLink="<a href='#' onclick='jumpToVideo("+vid_index+")' >" + video + "</a><br><br>";
+     const [video, timers, videoName] = sentence
+     var videoLink="<a href='#' onclick='jumpToVideo("+vid_index+")' >" + videoName + "</a><br><br>";
      //alert (videoLink);
      document.getElementById("allVideos").innerHTML +=videoLink;
      vid_index++;
