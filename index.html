@@ -883,12 +883,22 @@ function myLoop(){
 
 }
 
+function playAllVideos(){
+  let text = "Do you want to play all the videos?";
+  if (confirm(text) == true) {
+    myLoop();
+  }
+}
+  
 function jumpToVideo(vid_index){
 //    alert (vid_index);
+  let text = "Do you want to play this video?";
+  if (confirm(text) == true) {
     video_index = vid_index;
     time_index = 0;
     repeat = 0;
     myLoop();
+  }
 }
   
 function listVideos(){
@@ -916,7 +926,7 @@ function listVideos(){
 </video>
 
 <br>
-<a href="#" onclick="myLoop()" style="font-size: 30px; text-decoration: none"> Play All Videos</a>
+<a href="#" onclick="playAllVideos()" style="font-size: 30px; text-decoration: none"> Play All Videos</a>
 
 <br><br>
 <p id="allVideos"></p>
