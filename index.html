@@ -972,7 +972,9 @@ var sentences=
 let video_index = 0;
 let time_index = 0;
 let repeat = 0;
-
+let pauseOrNot=false;
+let repeatTimes = 4;
+  
 var video;
 var maxTime;
 
@@ -987,7 +989,8 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function playVideo(myUrl, startTime, endTime) { 
-  //document.getElementById("demo").innerHTML +=myUrl + " start:"+startTime+" end: "+endTime+"<br>";
+  document.getElementById("demo").innerHTML +=myUrl + " start:"+startTime+" end: "+endTime+"<br>";
+  document.getElementById("bodydesc").scrollTop = document.getElementById("bodydesc").scrollHeight;
   
   //video.src = 'video/'+myUrl;
   video.src = myUrl;
@@ -996,7 +999,22 @@ function playVideo(myUrl, startTime, endTime) {
   maxTime = endTime;
 } 
 
+function playAllVideos(){
+  let text = "Do you want to play all the videos?";
+  if (confirm(text) == true) {
+    video_index = 0;
+    time_index = 0;
+    repeat = 0;
+    myLoop();
+  }
+}
 
+function updateRepeatTimes(repeatTimes_index){
+  repeatTimes =repeatTimes_index;
+  repeat=0; 
+  myLoop();
+}  
+  
 function myLoop(){
   if (!sentences[video_index]) {
     //video.src = null;
@@ -1007,8 +1025,15 @@ function myLoop(){
 
   }
   playVideo(sentences[video_index][0], sentences[video_index][1][time_index][0], sentences[video_index][1][time_index][1]);
+  
+  if (repeat==0){
+     if (pauseOrNot==true){
+        video.pause();
+     }
+  } 
+  
   repeat++;
-  if (repeat >= 4) {
+  if (repeat >= repeatTimes) {
     repeat = 0;
     time_index++;
     if (time_index >= sentences[video_index][1].length) {
@@ -1019,14 +1044,23 @@ function myLoop(){
 
 }
 
-function playAllVideos(){
-  let text = "Do you want to play all the videos?";
-  if (confirm(text) == true) {
-    video_index = 0;
-    time_index = 0;
-    repeat = 0;
-    myLoop();
+function moveBackwardTimeindex(){
+  if (time_index>0){
+     time_index--;
+     repeat=0;
+     myLoop();
   }
+  else{
+     time_index=0;
+  }
+}
+
+function moveForwardTimeindex(){
+   if (time_index<sentences[video_index][1].length){
+      time_index++; 
+      repeat=0; 
+      myLoop();
+   }
 }
   
 function jumpToVideo(vid_index){
@@ -1058,16 +1092,72 @@ function listVideos(){
 </head>
 <body onload="listVideos()">
 
+<table>
+  <tr>
+    <td>
+    <video id="myVideo" width="1000" height="800" controls autoplay loop>
 
-<video id="myVideo" width="1000" height="800" controls autoplay loop>
+      Your browser does not support the video tag.
+    </video>
+    </td>
+    <td>
+    <div id="bodydesc" style="margin-left:auto; margin-right:auto; width:560px; height: 400px; overflow-y: scroll;">
 
-  Your browser does not support the video tag.
-</video>
+        <p id="demo">   </p>
 
+    </div>
+    </td>
+  </tr>
+</table>
+  
 <br>
-<a href="#" onclick="playAllVideos()" style="font-size: 30px; text-decoration: none"> Play All Videos</a>
+<table border=2>
+<tr>
+<td>
+<a href="#" onclick="playAllVideos()" style="font-size: 30px; text-decoration: none" > Play All Videos</a>
+</td>
+<td>
+<a href="#" onclick="pauseOrNot=true" style="font-size: 30px; text-decoration: none" > Pause = True </a>
+</td>
+<td>
+<a href="#" onclick="pauseOrNot=false" style="font-size: 30px; text-decoration: none" > Pause = false </a>
+</td>
+<td>
+<a href="#" onclick="moveForwardTimeindex()" style="font-size: 30px; text-decoration: none" > Move Forward Time Index </a>
+</td>
+<td>
+<a href="#" onclick="moveBackwardTimeindex()" style="font-size: 30px; text-decoration: none" > Move Backward Time Index </a>
+</td>
 
-<br><br>
+
+</tr>
+<tr>
+
+<td>
+<a href="#" onclick="updateRepeatTimes(1)" style="font-size: 30px; text-decoration: none" > Repeat Once </a>
+</td>
+
+<td>
+<a href="#" onclick="updateRepeatTimes(2)" style="font-size: 30px; text-decoration: none" > Repeat Twice </a>
+</td>
+
+<td>
+<a href="#" onclick="updateRepeatTimes(3)" style="font-size: 30px; text-decoration: none" > Repeat 3 Times </a>
+</td>
+
+<td>
+<a href="#" onclick="updateRepeatTimes(4)" style="font-size: 30px; text-decoration: none" > Repeat 4 Times </a>
+</td>
+
+
+<td>
+<a href="#" onclick="updateRepeatTimes(5)" style="font-size: 30px; text-decoration: none" > Repeat 5 Times </a>
+</td>
+
+</tr>
+</table>
+  
+<br>
 <p id="allVideos"></p>
 <br><br>
   
