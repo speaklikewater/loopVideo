@@ -2140,14 +2140,19 @@ function listVideos(){
      vid_index++;
   }
   document.getElementById("allVideos").style.fontSize = "x-large";
+  hideVideo();
 }
 
 function hideVideo() {
   document.getElementById("myVideo").style.visibility = "hidden";
 }
 function unhideVideo() {
-  document.getElementById("myVideo").style.visibility = "visible";
+  let passW = prompt("Please enter password", "");
+  if (passW == "123456") {
+     document.getElementById("myVideo").style.visibility = "visible";
+  }  
 }
+
   
 </script>
 </head>
