@@ -10,183 +10,198 @@ img {
  width: 25px;
  content:url(mybutton.png);
 }
+img:hover {
+    cursor: pointer;
+}
+
+
+
 </style>
-</head>
+
 
 <script>
-function playSound (mysound) {
-	let theSound = new Audio(mysound);
-	theSound.play();
-}
+function playSound (mysound, img) {
+
+    if (img)
+      img.style.visibility = "hidden";
+
+    let theSound = new Audio(mysound);
+    theSound.addEventListener('ended', function() {
+      if (img)
+        img.style.visibility = "visible";
+    });
+    theSound.play();
+  }
 
 </script>
 
-<body>
+</head>
 
+<body>
 <table border=1 >
 
 <tr>
 <td>
 ch
-<img onclick="playSound('ch.m4a')" />
+<img onclick="playSound('ch.m4a',this)" />
 </td>
 <td>
 chó
-<img onclick="playSound('cho.m4a')" />
+<img onclick="playSound('cho.m4a',this)" />
 </td>
 </tr>
 
 <tr>
 <td>
 kh
-<img onclick="playSound('kh.m4a')" />
+<img onclick="playSound('kh.m4a', this)" />
 </td>
 <td>
 khò
-<img onclick="playSound('kho.m4a')" />
+<img onclick="playSound('kho.m4a', this)" />
 </td>
 </tr>
 
 <tr>
 <td>
 g
-<img onclick="playSound('g.m4a')" />
+<img onclick="playSound('g.m4a', this)" />
 </td>
 <td>
 gò
-<img onclick="playSound('go.m4a')" />
+<img onclick="playSound('go.m4a', this)" />
 </td>
 </tr>
 
 <tr>
 <td>
 gh
-<img onclick="playSound('gh.m4a')" />
+<img onclick="playSound('gh.m4a', this)" />
 </td>
 <td>
 ghế
-<img onclick="playSound('ghe.m4a')" />
+<img onclick="playSound('ghe.m4a', this)" />
 </td>
 </tr>
 
 <tr>
 <td>
 ng
-<img onclick="playSound('ng.m4a')" />
+<img onclick="playSound('ng.m4a', this)" />
 </td>
 <td>
 ngủ
-<img onclick="playSound('ngu.m4a')" />
+<img onclick="playSound('ngu.m4a', this)" />
 </td>
 </tr>
 
 <tr>
 <td>
 ngh
-<img onclick="playSound('ngh.m4a')" />
+<img onclick="playSound('ngh.m4a', this)" />
 </td>
 <td>
 nghe
-<img onclick="playSound('nghe.m4a')" />
+<img onclick="playSound('nghe.m4a', this)" />
 </td>
 </tr>
 
 <tr>
 <td>
 t
-<img onclick="playSound('t.m4a')" />
+<img onclick="playSound('t.m4a', this)" />
 </td>
 <td>
 tớ
-<img onclick="playSound('to.m4a')" />
+<img onclick="playSound('to.m4a', this)" />
 </td>
 </tr>
 
 <tr>
 <td>
 th
-<img onclick="playSound('th.m4a')" />
+<img onclick="playSound('th.m4a', this)" />
 </td>
 <td>
 thờ
-<img onclick="playSound('tho.m4a')" />
+<img onclick="playSound('tho.m4a', this)" />
 </td>
 </tr>
 
 <tr>
 <td>
 nh
-<img onclick="playSound('nh.m4a')" />
+<img onclick="playSound('nh.m4a', this)" />
 </td>
 <td>
 nhờ
-<img onclick="playSound('nho.m4a')" />
+<img onclick="playSound('nho.m4a', this)" />
 </td>
 </tr>
 
 <tr>
 <td>
 r
-<img onclick="playSound('r.m4a')" />
+<img onclick="playSound('r.m4a', this)" />
 </td>
 <td>
 rả
-<img onclick="playSound('ra.m4a')" />
+<img onclick="playSound('ra.m4a', this)" />
 </td>
 </tr>
 
 <tr>
 <td>
 tr
-<img onclick="playSound('tr.m4a')" />
+<img onclick="playSound('tr.m4a', this)" />
 </td>
 <td>
 trả
-<img onclick="playSound('tra.m4a')" />
+<img onclick="playSound('tra.m4a', this)" />
 </td>
 </tr>
 
 <tr>
 <td>
 ia
-<img onclick="playSound('ia.m4a')" />
+<img onclick="playSound('ia.m4a', this)" />
 </td>
 <td>
 chia
-<img onclick="playSound('chia.m4a')" />
+<img onclick="playSound('chia.m4a', this)" />
 </td>
 </tr>
 
 <tr>
 <td>
 ua
-<img onclick="playSound('ua.m4a')" />
+<img onclick="playSound('ua.m4a', this)" />
 </td>
 <td>
 chúa
-<img onclick="playSound('chua.m4a')" />
+<img onclick="playSound('chua.m4a', this)" />
 </td>
 </tr>
 
 <tr>
 <td>
 ưa
-<img onclick="playSound('ua2.m4a')" />
+<img onclick="playSound('ua2.m4a', this)" />
 </td>
 <td>
 chừa
-<img onclick="playSound('chua2.m4a')" />
+<img onclick="playSound('chua2.m4a', this)" />
 </td>
 </tr>
 
 <tr>
 <td>
 p
-<img onclick="playSound('p.m4a')" />
+<img onclick="playSound('p.m4a', this)" />
 </td>
 <td>
 pí
-<img onclick="playSound('pi.m4a')" />
+<img onclick="playSound('pi.m4a', this)" />
 </td>
 </tr>
 
