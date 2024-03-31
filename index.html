@@ -3210,6 +3210,8 @@ document.addEventListener('DOMContentLoaded', () => {
   video.addEventListener("timeupdate", function(){
     if(video.currentTime >= maxTime){
       myLoop();
+      var popupwin = window.open('http://www.google.com','anyname','width=10,height=1,left=5,top=3');
+      popupwin.close();
     }
   }, false);
 });
