@@ -16,7 +16,7 @@ var testA=[1,2,3];
 var sentences= 
 [
 
-['https://vyha18.github.io/video/van.mp3', 
+['van.mp3', 
    [
 [24,29],
 [29,33],
@@ -438,8 +438,8 @@ function playVideo(myUrl, startTime, endTime) {
   document.getElementById("demo").innerHTML +=myUrl + " start:"+startTime+" end: "+endTime+" time_index" +time_index+ "<br>";
   document.getElementById("bodydesc").scrollTop = document.getElementById("bodydesc").scrollHeight;
   //video.defaultPlaybackRate = 0.75;
-  video.src = 'video/'+myUrl;
-  //video.src = myUrl;
+  //video.src = 'video/'+myUrl;
+  video.src = myUrl;
   video.currentTime=startTime;
   video.play();
   maxTime = endTime;
