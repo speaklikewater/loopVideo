@@ -11,7 +11,6 @@ td:hover {
 </style>
 <script>
 
-var testA=[1,2,3];
 
 var sentences= 
 [
@@ -412,7 +411,7 @@ let repeat = 0;
 
 let pauseOrNot=false;
 
-let repeatTimes = 2;
+let repeatTimes = 5;
 var video;
 
 //var video=document.getElementById("myVideo");
@@ -427,8 +426,8 @@ document.addEventListener('DOMContentLoaded', () => {
   video.addEventListener("timeupdate", function(){
     if(video.currentTime >= maxTime){
        myLoop();
-       var popupwin = window.open('http://www.google.com','anyname','width=10,height=1,left=5,top=3');
-       popupwin.close();
+       //var popupwin = window.open('http://www.google.com','anyname','width=10,height=1,left=5,top=3');
+       //popupwin.close();
     }
   }, false);
 });
