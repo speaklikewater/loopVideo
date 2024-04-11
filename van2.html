@@ -1914,6 +1914,11 @@ function arr2tbl(ncols, words){
 }
 
 function showWords(myVid_index){
+  var myTableTitle=document.getElementById("tableTitle");
+  myTableTitle.innerHTML =sentences[myVid_index][2];
+  myTableTitle.style.fontSize = "x-large";
+  myTableTitle.style.fontWeight ="bold";
+  
   var table = document.getElementById('wordTable');
   // Clear the existing table content
   table.innerHTML = '';
@@ -2051,7 +2056,8 @@ function unhideVideo() {
 </script>
 </head>
 <body onload="listVideos()">
-
+<p id="tableTitle"></p>
+  
 <table id="wordTable" style="font-size:30px">
 </table>
 <br>
