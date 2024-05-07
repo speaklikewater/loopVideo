@@ -7,7 +7,14 @@
   left: 40px;
 }
 a {
+      color: blue; 
       cursor: pointer;
+      text-decoration: underline;
+}
+
+a:hover {
+    color: red; 
+    background-color: orange;
 }  
 table, th, td {
   border: 1px solid black;
@@ -4881,7 +4888,7 @@ function listVideos(){
   for (const sentence of sentences) {
      
      const [video, timers,videoName] = sentence
-     var videoLink="<a href='#' onclick='jumpToVideo("+vid_index+")' >" + videoName + "</a><br><br>";
+     var videoLink="<a onclick='jumpToVideo("+vid_index+")' >" + videoName + "</a><br><br>";
      //alert (videoLink);
      document.getElementById("allVideos").innerHTML +=videoLink;
      vid_index++;
