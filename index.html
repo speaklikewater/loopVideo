@@ -1,6 +1,17 @@
 ﻿<html>
 <head>
+<style>
+a {
+      color: blue; 
+      cursor: pointer;
+      text-decoration: underline;
+}
+a:hover {
+    color: red; 
+    background-color: orange;
+}
 
+</style>
 <script>
 var sentences= 
 [
@@ -3314,7 +3325,7 @@ function listVideos(){
   for (const sentence of sentences) {
      
      const [video, timers, videoName] = sentence
-     var videoLink="<a href='#' onclick='jumpToVideo("+vid_index+")' >" + videoName + "</a><br><br>";
+     var videoLink="<a onclick='jumpToVideo("+vid_index+")' >" + videoName + "</a><br><br>";
      //alert (videoLink);
      document.getElementById("allVideos").innerHTML +=videoLink;
      vid_index++;
@@ -3360,19 +3371,19 @@ function unhideVideo() {
 <table border=2>
 <tr>
 <td>
-<a href="#" onclick="playAllVideos()" style="font-size: 30px; text-decoration: none" > Play All Videos</a>
+<a  onclick="playAllVideos()" style="font-size: 30px; text-decoration: none" > Play All Videos</a>
 </td>
 <td>
-<a href="#" onclick="pauseOrNot=true" style="font-size: 30px; text-decoration: none" > Pause = True </a>
+<a  onclick="pauseOrNot=true" style="font-size: 30px; text-decoration: none" > Pause = True </a>
 </td>
 <td>
-<a href="#" onclick="pauseOrNot=false" style="font-size: 30px; text-decoration: none" > Pause = false </a>
+<a  onclick="pauseOrNot=false" style="font-size: 30px; text-decoration: none" > Pause = false </a>
 </td>
 <td>
-<a href="#" onclick="moveForwardTimeindex()" style="font-size: 30px; text-decoration: none" > Move Forward Time Index </a>
+<a  onclick="moveForwardTimeindex()" style="font-size: 30px; text-decoration: none" > Move Forward Time Index </a>
 </td>
 <td>
-<a href="#" onclick="moveBackwardTimeindex()" style="font-size: 30px; text-decoration: none" > Move Backward Time Index </a>
+<a  onclick="moveBackwardTimeindex()" style="font-size: 30px; text-decoration: none" > Move Backward Time Index </a>
 </td>
 
 
@@ -3380,24 +3391,24 @@ function unhideVideo() {
 <tr>
 
 <td>
-<a href="#" onclick="updateRepeatTimes(1)" style="font-size: 30px; text-decoration: none" > Repeat Once </a>
+<a  onclick="updateRepeatTimes(1)" style="font-size: 30px; text-decoration: none" > Repeat Once </a>
 </td>
 
 <td>
-<a href="#" onclick="updateRepeatTimes(2)" style="font-size: 30px; text-decoration: none" > Repeat Twice </a>
+<a  onclick="updateRepeatTimes(2)" style="font-size: 30px; text-decoration: none" > Repeat Twice </a>
 </td>
 
 <td>
-<a href="#" onclick="updateRepeatTimes(3)" style="font-size: 30px; text-decoration: none" > Repeat 3 Times </a>
+<a  onclick="updateRepeatTimes(3)" style="font-size: 30px; text-decoration: none" > Repeat 3 Times </a>
 </td>
 
 <td>
-<a href="#" onclick="updateRepeatTimes(4)" style="font-size: 30px; text-decoration: none" > Repeat 4 Times </a>
+<a  onclick="updateRepeatTimes(4)" style="font-size: 30px; text-decoration: none" > Repeat 4 Times </a>
 </td>
 
 
 <td>
-<a href="#" onclick="updateRepeatTimes(5)" style="font-size: 30px; text-decoration: none" > Repeat 5 Times </a>
+<a  onclick="updateRepeatTimes(5)" style="font-size: 30px; text-decoration: none" > Repeat 5 Times </a>
 </td>
 
 </tr>
@@ -3406,8 +3417,8 @@ function unhideVideo() {
 <br>
 <p id="allVideos"></p>
 <br><br>
-<a href="#" onclick="hideVideo()" style="font-size: 30px; text-decoration: none" >Hide</a>
-<a href="#" onclick="unhideVideo()" style="font-size: 30px; text-decoration: none" >Unhide</a>
+<a  onclick="hideVideo()" style="font-size: 30px; text-decoration: none" >Hide</a>
+<a  onclick="unhideVideo()" style="font-size: 30px; text-decoration: none" >Unhide</a>
  
 <p id="demo"></p>
 </body>
