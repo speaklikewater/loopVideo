@@ -1,6 +1,11 @@
 <html>
 <head>
 <style>
+#stayFixedDiv{
+  background-color: #FBD603;
+  position: fixed;
+  left: 40px;
+}
 table, th, td {
   border: 1px solid black;
 }
@@ -4897,21 +4902,23 @@ function unhideVideo() {
 </script>
 </head>
 <body onload="listVideos()">
-<h1 id="tableTitle"></h1>
-  
-<table id="wordTable" style="font-size:30px">
-</table>
-<br>
-
+<div id ="stayFixedDiv">
 <table>
 <tr>
 <td>
-<a href="#" onclick="pauseVideo()" style="font-size: 35px; text-decoration: none" > Pause Video</a>
+<a  onclick="pauseVideo()" style="font-size: 35px; text-decoration: none" > Pause Video</a>
 </td>
 <td>
-<a href="#" onclick="unpauseVideo()" style="font-size: 35px; text-decoration: none" > Unpause Video</a>
+<a onclick="unpauseVideo()" style="font-size: 35px; text-decoration: none" > Unpause Video</a>
 </td>
 </tr>
+</table>
+</div>
+
+<br>
+<h1 id="tableTitle"></h1>
+  
+<table id="wordTable" style="font-size:30px">
 </table>
 <br>
 
