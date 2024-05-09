@@ -5,7 +5,7 @@
   background-color: #FBD603;
   position: fixed;
   left: 40px;
-  bottom: 100px;
+  top: 1px;
 }
 a {
       color: blue; 
@@ -4914,16 +4914,8 @@ function unhideVideo() {
 </head>
 <body onload="listVideos()">
 <div id ="stayFixedDiv">
-<table>
-<tr>
-<td>
-<a  onclick="pauseVideo()" style="font-size: 35px; text-decoration: none" > Pause Video</a>
-</td>
-<td>
-<a onclick="unpauseVideo()" style="font-size: 35px; text-decoration: none" > Unpause Video</a>
-</td>
-</tr>
-</table>
+<a  onclick="pauseVideo()" style="font-size: 35px; text-decoration: none" > Pause Video</a> || 
+  <a onclick="unpauseVideo()" style="font-size: 35px; text-decoration: none" > Unpause Video</a>
 </div>
 
 <br>
